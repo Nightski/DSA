@@ -16,4 +16,4 @@ Table of Contents:
    - Graph
  - Greedy
  - Backtracking
- - dynamic programming
+ - Dynamic programming

@@ -5,8 +5,15 @@ Welcome to the Data Structures and Algorithms (DSA) repository! This project con
 Table of Contents:
 
 ## Table of Contents
-- [About the Problem](#about-the-problem)
-- [Implemented Data Structures](#implemented-data-structures)
-- [Implemented Algorithms](#implemented-algorithms)
-- [Languages Supported](#languages-supported)
-- [Contact](#contact)
+ - Recursion
+ - Data structures
+   - Array
+   - String
+   - Linked List
+   - Stack
+   - Queue
+   - Tree
+   - Graph
+ - Greedy
+ - Backtracking
+ - dynamic programming

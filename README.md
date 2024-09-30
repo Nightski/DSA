@@ -14,6 +14,3 @@ Table of Contents:
    - Queue
    - Tree
    - Graph
- - Greedy
- - Backtracking
- - Dynamic programming

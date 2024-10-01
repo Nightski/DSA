@@ -5,7 +5,6 @@ Welcome to the Data Structures and Algorithms (DSA) repository! This project con
 Table of Contents:
 
 ## Table of Contents
- - Recursion
  - Data structures
    - Array
    - String
@@ -14,3 +13,7 @@ Table of Contents:
    - Queue
    - Tree
    - Graph
+ - Recursion
+ - Greedy
+ - Backtracking
+ - Dynamic Programming

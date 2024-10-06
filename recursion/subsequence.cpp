@@ -1,3 +1,11 @@
+/* The problem is asking to give all the sustrings that can be made after deleting letters from the 
+   string without changing the order of the remaining order
+
+   This method includes picking the current character or not picking
+   Time Complexity - O(2^n)
+*/
+
+
 #include<iostream>
 using namespace std;
 

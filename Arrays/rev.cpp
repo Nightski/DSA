@@ -1,3 +1,12 @@
+/* The problem is to reverse an array.
+
+   We take two pointers one at start and one at end.
+   Then we swap the elements at both the pointers, increamenting start pointer
+   and decreamenting end pointer until both meet or start exceeds the end.
+
+  Time complexity - O(n), where n is the size of array
+*/
+
 #include<iostream>
 using namespace std;
 

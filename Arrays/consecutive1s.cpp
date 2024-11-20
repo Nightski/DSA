@@ -4,7 +4,7 @@ using namespace std;
 
 int cons1(vector<int>& nums){
     int count = 0;
-    int maxcount = INT_MIN;
+    int maxcount = 0;
     for(int i=0;i<nums.size();i++){
         if(nums[i] == 1){
             count++;

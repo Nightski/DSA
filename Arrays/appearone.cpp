@@ -1,3 +1,12 @@
+/* Every element appears twice in the array excpet one element, find that element
+    To find that we can use xor property:
+       XOR with same number is zero and XOR with zero is the number itself
+    Now every element appears twice their XOR will be zero and the unique element XOR with the zero will be the same element
+    giving us the element
+
+    Time complexity - O(n), n = size of array
+*/
+
 #include<iostream>
 #include<vector>
 using namespace std;

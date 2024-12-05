@@ -3,13 +3,11 @@
 using namespace std;
 
 int profitcal(vector<int>& prices){
-    int minpr = INT_MAX;
-    int maxprofit = INT_MIN;
-    int curr = 0;
-    for(int price: prices){
-        minpr = min(minpr, price);
-        curr = price - minpr;
-        maxprofit = max(maxprofit, curr);
+    int minpr = prices[0];
+    int maxprofit = 0;
+    for(int i=1;i<prices.size();i++{
+        minpr = min(minpr, prices[i);
+        maxprofit = max(maxprofit, nums[i] - minpr);
     }
     return maxprofit;
 }

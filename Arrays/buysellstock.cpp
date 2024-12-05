@@ -5,9 +5,9 @@ using namespace std;
 int profitcal(vector<int>& prices){
     int minpr = prices[0];
     int maxprofit = 0;
-    for(int i=1;i<prices.size();i++{
-        minpr = min(minpr, prices[i);
-        maxprofit = max(maxprofit, nums[i] - minpr);
+    for(int i=1;i<prices.size();i++){
+        minpr = min(minpr, prices[i]);
+        maxprofit = max(maxprofit, prices[i] - minpr);
     }
     return maxprofit;
 }

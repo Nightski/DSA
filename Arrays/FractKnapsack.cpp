@@ -1,42 +1,53 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-struct item{
-    int profit, weight;
-
-    item(int profit, int weight){
+struct Item{
+    int weight, profit;
+    Item(int profit, int weight){
         this->profit = profit;
         this->weight = weight;
     }
+    Item() : profit(0), weight(0) {} 
 };
 
-static bool comp(struct item a, struct item b){
+static bool cmp(struct Item a, struct Item b){
     double r1 = (double)a.profit / (double)a.weight;
     double r2 = (double)b.profit / (double)b.weight;
-    return r1 > r2; 
+    return r1 > r2;
 }
 
-double kpsolver(struct item ar[], int w, int n){
-    sort(ar, ar + n, comp);
+double fns(int W, struct Item arr[], int N){
+    sort(arr, arr+N, cmp);
+    
     double ans = 0.0;
-    for(int i=0;i<n;i++){
-        if(w >= ar[i].weight){
-            w -= ar[i].weight;
-            ans += ar[i].profit;
+    for(int i=0;i<N;i++){
+        if(arr[i].weight < W){
+            W -= arr[i].weight;
+            ans += arr[i].profit;
         }
         else{
-            ans += ar[i].profit * ((double)w / (double)ar[i].weight);
+            ans += (double)arr[i].profit * ((double)W / (double)arr[i].weight);
             break;
         }
     }
     return ans;
 }
 
-
 int main(){
-    item ar[] = {{60,10},{100,20},{120, 30}};
-    int W = 50;
-    int n = sizeof(ar) / sizeof(ar[0]);
-    cout<<kpsolver(ar, W, n);
+    int W, n;
+    cout<<"Enter the capacity of knapsack: ";
+    cin>>W;
+    cout<<"Enter no of items: ";
+    cin>>n;
+    Item* arr = new Item[n];
+    for(int i=0;i<n;i++){
+        int wei, pro;
+        cout<<"Enter profit and weight of the item no - "<<i+1<<" : ";
+        cin>>pro>>wei;
+        arr[i] = Item(pro, wei);
+    }
+    double ans = fns(W, arr, n);
+    cout<<"Maximum profit "<<ans<<endl;
+    delete[] arr;
     return 0;
 }
